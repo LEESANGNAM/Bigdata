@@ -11,11 +11,11 @@ result = total_price - price
 print("=======  거스름돈 ======")
 cal_result = result             # 동전갯수에 사용할 변수 : 거스름돈의 값을 넘겨받는다.
 num_500=int(cal_result/500)     # 500으로 나눠진 몫을 저장하고
-cal_result = cal_result - 500*num_500  #거스름돈에서 500원의 갯수만큼 빼준다.
-num_100=int(cal_result/100)            #500원을 뺀 거스름돈에서 100원의 갯수를 구한다.
-cal_result = cal_result - 100*num_100  #100원의 갯수만큼 거스름돈에서 빼준다.
+cal_result = cal_result % 500   # 몫을뺀 나머지를 저장해준다.
+num_100=int(cal_result/100)     #나머지로 남은 거스름돈을 100으로 나누어 몫을 저장한다.
+cal_result = cal_result % 100  #100원의 갯수를 뺀 나머지를 저장해준다.
 num_10=int(cal_result/10)
-cal_result = cal_result - 10*num_10
+cal_result = cal_result % 10
 num_1=int(cal_result/1)                 # 1원의 갯수까지 구하면 출력한다.
 print("500원 =",num_500)
 print("100원 =",num_100)
