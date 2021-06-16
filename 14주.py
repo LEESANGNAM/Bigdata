@@ -20,3 +20,7 @@ def add(a,b):
     return a+b
 c=add(1,2)
 print(c)
+print("===========")
+def test(a,*b):
+    return a-b[-1]
+print(test(1,2))
